@@ -14,7 +14,7 @@ const http = require("http").Server(app);
 //MONGOOSE DATABASE
 //==================================
 mongoose.connect(
-    process.env.MOONGODB_URI || "mongodb://username:password54321@ds151066.mlab.com:51066/heroku_5zfb8klb",
+    process.env.MONGODB_URI || "mongodb://localhost:3001/marathonAPI",
     {
         useCreateIndex: true,
         useNewUrlParser: true,
