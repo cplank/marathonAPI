@@ -6,15 +6,7 @@ const raceSchema = new Schema({
     raceDate: { type: Date },
     raceType: { type: String },
     raceTrainingWeeks: { type: Number },
-    raceTrainingDetails:
-        [{
-            date: { type: Date },
-            crossTrain: { type: Boolean },
-            restDay: { type: Boolean },
-            minutes: { type: Number },
-            miles: { type: Number },
-            completed: { type: Boolean }
-        }]
+    raceDays: [{ type: Schema.Types.ObjectId, ref: "Days" }]
 });
 
 const Race = mongoose.model("Race", raceSchema);
