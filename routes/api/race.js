@@ -10,4 +10,7 @@ router.route("/:id")
     .put(raceController.update)
     .delete(raceController.remove);
 
+router.route("/:id/:date")
+    .get(raceController.findOneByIdAndDate)
+
 module.exports = router;

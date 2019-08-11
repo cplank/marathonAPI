@@ -14,6 +14,14 @@ module.exports = {
             .then(dbrace => res.json(dbrace))
             .catch(err => res.status(442).json(err));
     },
+
+    findOneByIdAndDate: function (req, res) {
+        console.log("HOLY SHIT", req)
+        db.Days.findOne({ race: req.params.id, date: req.params.date })
+            .then(dbDays => res.json(dbDays))
+            .catch(err => res.status(442).json(err));
+    },
+
     create: function (req, res) {
         db.Race.create(req.body)
             .then(dbRace => { console.log('return: ', (dbRace)); res.json(dbRace) })
