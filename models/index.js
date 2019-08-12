@@ -1,3 +1,4 @@
 module.exports = {
-    Race: require("./race")
+    Race: require("./race"),
+    Days: require("./days")
 };
