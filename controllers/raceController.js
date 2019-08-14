@@ -16,9 +16,9 @@ module.exports = {
     },
 
     findOneByIdAndDate: function (req, res) {
-        console.log("HOLY SHIT", req)
+        console.log("HOLY SHIT", req.params.date)
         db.Days.findOne({ race: req.params.id, date: req.params.date })
-            .then(dbDays => res.json(dbDays))
+            .then(dbDays => { console.log(dbDays); res.json(dbDays) })
             .catch(err => res.status(442).json(err));
     },
 

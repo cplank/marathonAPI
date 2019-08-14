@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const raceSchema = new Schema({
     raceName: { type: String },
-    raceDate: { type: Date },
+    raceDate: { type: String },
     raceType: { type: String },
     raceTrainingWeeks: { type: Number },
     raceDays: [{ type: Schema.Types.ObjectId, ref: "Days" }]
