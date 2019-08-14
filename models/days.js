@@ -8,7 +8,7 @@ const daysSchema = new Schema({
     minutes: { type: Number },
     miles: { type: Number },
     completed: { type: Boolean },
-    race: [{ type: Schema.Types.ObjectId, ref: "Race" }]
+    race: { type: Schema.Types.ObjectId, ref: "Race" }
 });
 
 const Days = mongoose.model("Days", daysSchema);
